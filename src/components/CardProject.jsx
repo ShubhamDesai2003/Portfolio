@@ -27,7 +27,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
       <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-lg border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-purple-500/20">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
     
-        <div className="relative p-5 z-10">
+        <div className="relative p-5 z-10 h-[30rem]">
           <div className="relative overflow-hidden rounded-lg">
             <img
               src={Img}
@@ -46,7 +46,7 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
             </p>
             
             <div className="pt-4 flex items-center justify-between">
-              {ProjectLink ? (
+              {/* {ProjectLink ? (
                 <a
                 href={ProjectLink || "#"}
                   target="_blank"
@@ -54,12 +54,12 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
                   onClick={handleLiveDemo}
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
-                  {/* <span className="text-sm font-medium">Live Demo</span> */}
+                  <span className="text-sm font-medium">Live Demo</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (
                 <span className="text-gray-500 text-sm">Demo Not Available</span>
-              )}
+              )} */}
               
      
 

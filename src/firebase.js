@@ -8,6 +8,7 @@ import { getAnalytics, isSupported } from "firebase/analytics";
 import { collection, addDoc, getDocs } from "@firebase/firestore";
 
 // Load environment variables in Node.js only
+// for add-data
 // if (typeof process !== "undefined" && process.versions?.node) {
 //   const { config } = await import("dotenv");
 //   config();

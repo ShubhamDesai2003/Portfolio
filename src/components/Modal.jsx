@@ -32,14 +32,14 @@ const ProjectCardModal = ({ title, description, link }) => {
             <h2 className="mb-4 text-2xl font-bold">{title}</h2>
             <p className="mb-6 text-gray-400">{description}</p>
             <div className="flex justify-end space-x-4">
-              <a
+              {/* <a
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-md bg-blue-600 px-4 py-2 font-medium hover:bg-blue-700 transition-colors duration-200"
               >
-                {/* Live Demo <ExternalLink className="ml-2 inline-block h-5 w-5" /> */}
-              </a>
+                Live Demo <ExternalLink className="ml-2 inline-block h-5 w-5" />
+              </a> */}
               <button
                 className="rounded-md bg-gray-800 px-4 py-2 font-medium hover:bg-gray-700 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
