@@ -9,7 +9,7 @@ lerna-debug.log*
 
 build
 node_modules
-.env
+
 
 *.local
 
