@@ -1,14 +1,20 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+
+    // Anyone can read projects, but only logged-in users can write
     match /projects/{document=**} {
       allow read: if true;
       allow write: if request.auth != null;
     }
+
+    // Anyone can read certificates, but only logged-in users can write
     match /certificates/{document=**} {
       allow read: if true;
       allow write: if request.auth != null;
     }
+
+    // Everything else in Firestore requires login for both read & write
     match /{document=**} {
       allow read, write: if request.auth != null;
     }
