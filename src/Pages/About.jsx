@@ -112,19 +112,21 @@ const AboutPage = () => {
     fetchCounts();
   }, []);
 
-  // Experience calculation
-  const YearExperience = useMemo(() => {
-    const startDate = new Date("2021-01-01");
-    const today = new Date();
-    return (
-      today.getFullYear() -
-      startDate.getFullYear() -
-      (today <
-      new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate())
-        ? 1
-        : 0)
-    );
-  }, []);
+  // // Experience calculation
+  // const YearExperience = useMemo(() => {
+  //   const startDate = new Date("2021-01-01");
+  //   const today = new Date();
+  //   return (
+  //     today.getFullYear() -
+  //     startDate.getFullYear() -
+  //     (today <
+  //     new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate())
+  //       ? 1
+  //       : 0)
+  //   );
+  // }, []);
+
+   const YearExperience = "FRESHER"
 
   // AOS init
   useEffect(() => {
