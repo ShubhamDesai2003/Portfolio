@@ -62,26 +62,36 @@ const ProfileImage = memo(() => (
   </div>
 ));
 
-const StatCard = memo(({ icon: Icon, color, value, label, description, animation }) => (
-  <div data-aos={animation} data-aos-duration={1300} className="relative group">
-    <div className="relative z-10 bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-between">
-      <div className={`absolute -z-10 inset-0 bg-gradient-to-br ${color} opacity-10 group-hover:opacity-20`} />
-      <div className="flex items-center justify-between mb-4">
-        <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10">
-          <Icon className="w-8 h-8 text-white" />
+const StatCard = memo(
+  ({ icon: Icon, color, value, label, description, animation }) => (
+    <div
+      data-aos={animation}
+      data-aos-duration={1300}
+      className="relative group"
+    >
+      <div className="relative z-10 bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col justify-between">
+        <div
+          className={`absolute -z-10 inset-0 bg-gradient-to-br ${color} opacity-10 group-hover:opacity-20`}
+        />
+        <div className="flex items-center justify-between mb-4">
+          <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10">
+            <Icon className="w-8 h-8 text-white" />
+          </div>
+          <span className="text-4xl font-bold text-white">{value}</span>
         </div>
-        <span className="text-4xl font-bold text-white">{value}</span>
-      </div>
-      <div>
-        <p className="text-sm uppercase tracking-wider text-gray-300 mb-2">{label}</p>
-        <div className="flex items-center justify-between">
-          <p className="text-xs text-gray-400">{description}</p>
-          <ArrowUpRight className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
+        <div>
+          <p className="text-sm uppercase tracking-wider text-gray-300 mb-2">
+            {label}
+          </p>
+          <div className="flex items-center justify-between">
+            <p className="text-xs text-gray-400">{description}</p>
+            <ArrowUpRight className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-));
+  )
+);
 
 const AboutPage = () => {
   const [totalProjects, setTotalProjects] = useState(0);
@@ -152,7 +162,10 @@ const AboutPage = () => {
   );
 
   return (
-    <div id="About" className="h-auto pb-[10%] text-white px-[5%] lg:px-[10%] mt-10">
+    <div
+      id="About"
+      className="h-auto pb-[10%] text-white px-[5%] lg:px-[10%] mt-10"
+    >
       <Header />
       <div className="w-full mx-auto pt-8 sm:pt-12">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 items-center">
@@ -164,11 +177,25 @@ const AboutPage = () => {
               <span className="block mt-2 text-gray-200">Shubham Desai</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify">
-              A Master of Computer Application student with a passion for fullstack development. Skilled in Java, SQL, and the MERN stack, I focus on building innovative web solutions and enhancing user experiences through technology.
+              A Master of Computer Application student with a passion for
+              fullstack development. Skilled in Java, SQL, and the MERN stack, I
+              focus on building innovative web solutions and enhancing user
+              experiences through technology.
             </p>
           </div>
           <ProfileImage />
         </div>
+        <a
+          href="https://indiraicemac-my.sharepoint.com/:u:/g/personal/shubham_desai_indiraicem_ac_in/ET6z7jCnjYpMjJ-MlODpRE8BoJsKIyELQN9m4BKRnzEhGw?download=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-50 inline-block mt-6"
+        >
+          <button className="sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+            <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+          </button>
+        </a>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
           {statsData.map((stat) => (
             <StatCard key={stat.label} {...stat} />

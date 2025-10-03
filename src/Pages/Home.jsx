@@ -275,6 +275,11 @@ const Home = () => {
                   }`}
                 >
                   <DotLottieReact {...lottieOptions} />
+                  {/* <DotLottieReact
+                    autoplay={lottieOptions.autoplay}
+                    loop={lottieOptions.loop}
+                    // ❌ Don’t pass rendererSettings here, the component doesn't use it
+                  /> */}
                 </div>
 
                 <div
